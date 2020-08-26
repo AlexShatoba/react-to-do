@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import { ListElement } from './components/list-element/list-element'
+import { ListComponent } from './components/list-component/list-component'
 
 const App = () => {
   return (
-    <ListElement />
+    <ListComponent />
   );
 }
 
