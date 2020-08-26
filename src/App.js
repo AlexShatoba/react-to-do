@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import ListElement from './components/list-element/list-element'
+import { ListElement } from './components/list-element/list-element'
 
-class App extends Component {
-  render() {
-    return (
-      <ListElement />
-    );
-  }
+const App = () => {
+  return (
+    <ListElement />
+  );
 }
 
 export default App;
