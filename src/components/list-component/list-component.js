@@ -1,22 +1,30 @@
 import React from 'react';
 import './list-component.css';
+import PropTypes from 'prop-types'
+export function ListComponent(props) {
+  const [taskName, setTaskName] = React.useState('');
 
-export class ListComponent extends React.Component {
-  constructor() {
-    super(props);
-    this.
+  function taskNameChange(event) {
+    setTaskName(event.target.value);
+    console.log('taskNameChange', event.target.value)
   }
 
-  addFolder() {
-    this.countOf
+  function onSubmit(event) {
+    event.preventDefault()
+    console.log('click', event);
   }
-  render() {
-    return (
-      <div>
-      <AddFolder />
-      <FolderContainer folder={this.folders} />
-      <PontOfFolder points={this.points}/>
-      </div>
-    )
-  }
+
+  return (
+    <div>
+      <form className="add-task-container" onSubmit={onSubmit}>
+        <input className="task-name" onChange={taskNameChange} value={taskName}></input>
+        <button className="add-task" type="submit"></button>
+      </form>
+      {/* <ListItem /> */}
+    </div>
+  )
+}
+
+ListComponent.propTypes = {
+
 }
